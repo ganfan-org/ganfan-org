@@ -7,20 +7,20 @@ const darkCodeTheme = themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Ganfan Tech',
+  title: 'Ganfan Org',
   tagline: 'Simple yet extraordinary',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://ganfantech.com',
+  url: 'https://ganfan.org',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'ganfantech', // Usually your GitHub org/user name.
-  projectName: 'ganfantech', // Usually your repo name.
+  organizationName: 'ganfan-org', // Usually your GitHub org/user name.
+  projectName: 'ganfan-org', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -65,9 +65,9 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Ganfan Tech',
+        title: 'Ganfan Org',
         logo: {
-          alt: 'Ganfan Tech Logo',
+          alt: 'Ganfan Org Logo',
           src: 'img/logo.png',
         },
         items: [
@@ -79,7 +79,7 @@ const config = {
             label: 'Tutorial',
           },
           {
-            href: 'https://github.com/ganfantech',
+            href: 'https://github.com/ganfan-org',
             label: 'GitHub',
             position: 'right',
           },
@@ -115,7 +115,7 @@ const config = {
               // },
               {
                 label: 'GitHub',
-                href: 'https://github.com/ganfantech',
+                href: 'https://github.com/ganfan-org',
               },
             ],
           },
