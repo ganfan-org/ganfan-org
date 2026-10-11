@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkganfan_org_website=self.webpackChunkganfan_org_website||[]).push([[947],{6600:a=>{a.exports=JSON.parse('{"authors":[{"name":"Alan Bang","title":"Full Stack Engineer @ Ganfan Org","url":"https://github.com/abangcc","imageURL":"https://github.com/abangcc.png","key":"abangfundi","page":null,"count":0}]}')}}]);
