@@ -15,7 +15,7 @@ A simple and elegant journaling app with automatic iCloud sync across iPhone and
 
 - [Privacy Policy](/app/privacy/gfjournal)
 
-## Frequently Asked Questions
+## FAQs
 
 ### iCloud sync isn't working
 

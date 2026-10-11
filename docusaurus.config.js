@@ -71,7 +71,7 @@ const config = {
           src: 'img/ganfan_logo.svg',
         },
         items: [
-          // {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/app', label: 'Apps', position: 'left'},
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
@@ -89,8 +89,12 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Ganfan',
             items: [
+              {
+                label: 'Apps',
+                to: '/app',
+              },
               {
                 label: 'Tutorial',
                 to: '/docs/intro',
