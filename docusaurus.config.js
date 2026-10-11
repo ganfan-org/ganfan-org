@@ -7,9 +7,9 @@ const darkCodeTheme = themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Ganfan Org',
+  title: 'Ganfan',
   tagline: 'Simple yet extraordinary',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/ganfan_logo.svg',
 
   // Set the production url of your site here
   url: 'https://ganfan.org',
@@ -65,10 +65,10 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Ganfan Org',
+        title: 'Ganfan',
         logo: {
-          alt: 'Ganfan Org Logo',
-          src: 'img/logo.png',
+          alt: 'Ganfan Logo',
+          src: 'img/ganfan_logo.svg',
         },
         items: [
           // {to: '/blog', label: 'Blog', position: 'left'},
@@ -120,7 +120,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Ganfan. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
