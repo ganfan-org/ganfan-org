@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkganfan_org_website=self.webpackChunkganfan_org_website||[]).push([[2790],{7579:e=>{e.exports=JSON.parse('{"name":"docusaurus-plugin-content-docs","id":"book-dev-daily"}')}}]);
