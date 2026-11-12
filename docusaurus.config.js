@@ -1,14 +1,51 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
+const fs = require('node:fs');
+const path = require('node:path');
 const {themes} = require('prism-react-renderer');
+// remark/rehype 插件是 ESM，经 require 后需要取 default。
+const remarkMathModule = require('remark-math');
+const rehypeKatexModule = require('rehype-katex');
+const remarkMath = remarkMathModule.default ?? remarkMathModule;
+const rehypeKatex = rehypeKatexModule.default ?? rehypeKatexModule;
 const lightCodeTheme = themes.github;
 const darkCodeTheme = themes.dracula;
+
+// 书籍索引由 scripts/sync-books.mjs 生成。缺失时保持空列表，避免影响现有站点构建。
+function loadBooks() {
+  try {
+    const manifest = JSON.parse(
+      fs.readFileSync(path.join(__dirname, 'books-data', 'manifest.json'), 'utf8'),
+    );
+    return manifest.books ?? [];
+  } catch {
+    return [];
+  }
+}
+
+const books = loadBooks();
+
+const bookPlugins = books.map(book => [
+  '@docusaurus/plugin-content-docs',
+  {
+    id: `book-${book.slug}`,
+    path: path.join(__dirname, 'books-data', book.slug),
+    routeBasePath: `books/${book.slug}`,
+    sidebarPath: path.join(__dirname, 'books-data', book.slug, 'sidebar.js'),
+    breadcrumbs: false,
+    showLastUpdateTime: false,
+    // 技术书里大量 shell 变量写作 $SHELL / $PATH，关闭单美元行内公式可避免误判；
+    // 公式统一使用 $$...$$（行内可用 \\(...\\) 转义或以后扩展显式标记）。
+    remarkPlugins: [[remarkMath, {singleDollarTextMath: false}]],
+    rehypePlugins: [[rehypeKatex, {throwOnError: false, strict: false}]],
+  },
+]);
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Ganfan',
-  tagline: 'Simple yet extraordinary',
+  tagline: 'Warm. Restrained. Native.',
   favicon: 'img/ganfan_logo.svg',
 
   // Set the production url of your site here
@@ -25,12 +62,28 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'zh-Hans'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+        htmlLang: 'en',
+      },
+      'zh-Hans': {
+        label: '简体中文',
+        htmlLang: 'zh-Hans',
+      },
+    },
+  },
+
+  // 每本已上架的书一个 docs 实例，各自拥有独立路由与章节侧边栏。
+  plugins: bookPlugins,
+
+  clientModules: [require.resolve('./src/clientModules.js')],
+
+  customFields: {
+    books,
   },
 
   presets: [
@@ -40,18 +93,9 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/ganfan-org/ganfan-org/tree/main/',
         },
-        // blog: {
-        //   showReadingTime: true,
-        //   // Please change this to your repo.
-        //   // Remove this to remove the "edit this page" links.
-        //   editUrl:
-        //     'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        // },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -62,8 +106,8 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      // Social card image
+      image: 'img/ganfan_logo.svg',
       navbar: {
         title: 'Ganfan',
         logo: {
@@ -71,52 +115,70 @@ const config = {
           src: 'img/ganfan_logo.svg',
         },
         items: [
-          {to: '/app', label: 'Apps', position: 'left'},
+          {to: '/app', label: 'Products', position: 'left'},
+          {href: 'https://games.ganfan.org', label: 'Games', position: 'left'},
+          {to: '/books', label: 'Books', position: 'left'},
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Docs',
           },
           {
             href: 'https://github.com/ganfan-org',
             label: 'GitHub',
             position: 'right',
           },
+          {
+            type: 'localeDropdown',
+            position: 'right',
+          },
         ],
       },
       footer: {
-        style: 'dark',
+        style: 'light',
         links: [
           {
-            title: 'Ganfan',
+            title: 'Products',
             items: [
               {
-                label: 'Apps',
-                to: '/app',
+                label: 'Ganfan Journal',
+                to: '/app/gfjournal',
               },
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Ganfan Book',
+                href: 'https://github.com/ganfan-org',
+              },
+              {
+                label: 'Ganfan Money',
+                href: 'https://github.com/ganfan-org',
+              },
+              {
+                label: 'Ganfan Games',
+                href: 'https://games.ganfan.org',
               },
             ],
           },
           {
-            title: 'Community',
+            title: 'Resources',
+            items: [
+              {
+                label: 'Docs',
+                to: '/docs/intro',
+              },
+              {
+                label: 'Support',
+                to: '/app/support',
+              },
+            ],
+          },
+          {
+            title: 'About',
             items: [
               {
                 label: 'Zhihu',
                 href: 'https://www.zhihu.com/people/ganfan-tech',
               },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              // {
-              //   label: 'Blog',
-              //   to: '/blog',
-              // },
               {
                 label: 'GitHub',
                 href: 'https://github.com/ganfan-org',
@@ -124,7 +186,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Ganfan. Built with Docusaurus.`,
+        copyright: `© ${new Date().getFullYear()} Ganfan. Crafted with care.`,
       },
       prism: {
         theme: lightCodeTheme,

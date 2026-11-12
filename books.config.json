@@ -1,0 +1,49 @@
+{
+  "$comment": "官网书籍索引（发布白名单）。只列出需要上架的书籍；未列入或 published=false 的书不会被同步。",
+  "books": [
+    {
+      "slug": "c",
+      "source": "~/gfbooks/c",
+      "title": "C 语言",
+      "description": "C 语言基础、标准库、内存管理与构建工具的学习笔记。",
+      "author": "Alan Bang",
+      "category": "技术",
+      "tags": ["C", "系统编程"],
+      "order": 1,
+      "published": true
+    },
+    {
+      "slug": "dev-daily",
+      "source": "~/gfbooks/tinker",
+      "title": "开发日常",
+      "description": "开发环境、Git、Linux 与日常踩坑记录。",
+      "author": "Alan Bang",
+      "category": "实践",
+      "tags": ["Git", "Linux", "工具链"],
+      "order": 2,
+      "published": true
+    },
+    {
+      "slug": "algorithm",
+      "source": "~/gfbooks/algorithm",
+      "title": "算法",
+      "description": "算法学习笔记。",
+      "author": "Alan Bang",
+      "category": "技术",
+      "tags": ["算法"],
+      "order": 3,
+      "published": true
+    },
+    {
+      "slug": "linux",
+      "source": "~/gfbooks/Unix&Linux",
+      "title": "Linux 基础",
+      "description": "Linux 基础与日常使用笔记。",
+      "author": "Alan Bang",
+      "category": "技术",
+      "tags": ["Linux"],
+      "order": 4,
+      "published": true
+    }
+  ]
+}

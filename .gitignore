@@ -7,6 +7,8 @@
 # Generated files
 .docusaurus
 .cache-loader
+# 书籍同步产物（书稿源文件留在各自仓库，不进入官网仓库）
+/books-data
 
 # Misc
 .DS_Store

@@ -1,0 +1,50 @@
+{
+  "link.title.Products": {
+    "message": "产品",
+    "description": "The title of the footer links column with title=Products in the footer"
+  },
+  "link.title.Resources": {
+    "message": "资源",
+    "description": "The title of the footer links column with title=Resources in the footer"
+  },
+  "link.title.About": {
+    "message": "关于",
+    "description": "The title of the footer links column with title=About in the footer"
+  },
+  "link.item.label.Ganfan Journal": {
+    "message": "Ganfan Journal",
+    "description": "The label of footer link with label=Ganfan Journal linking to /app/gfjournal"
+  },
+  "link.item.label.Ganfan Book": {
+    "message": "Ganfan Book",
+    "description": "The label of footer link with label=Ganfan Book linking to https://github.com/ganfan-org"
+  },
+  "link.item.label.Ganfan Money": {
+    "message": "Ganfan Money",
+    "description": "The label of footer link with label=Ganfan Money linking to https://github.com/ganfan-org"
+  },
+  "link.item.label.Ganfan Games": {
+    "message": "Ganfan Games",
+    "description": "The label of footer link with label=Ganfan Games linking to https://github.com/ganfan-org"
+  },
+  "link.item.label.Docs": {
+    "message": "文档",
+    "description": "The label of footer link with label=Docs linking to /docs/intro"
+  },
+  "link.item.label.Support": {
+    "message": "支持",
+    "description": "The label of footer link with label=Support linking to /app/support"
+  },
+  "link.item.label.Zhihu": {
+    "message": "知乎",
+    "description": "The label of footer link with label=Zhihu linking to https://www.zhihu.com/people/ganfan-tech"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "The label of footer link with label=GitHub linking to https://github.com/ganfan-org"
+  },
+  "copyright": {
+    "message": "© 2026 Ganfan. 用心做产品。",
+    "description": "The footer copyright"
+  }
+}
