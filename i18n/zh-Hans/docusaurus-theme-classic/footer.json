@@ -13,7 +13,7 @@
   },
   "link.item.label.Ganfan Journal": {
     "message": "Ganfan Journal",
-    "description": "The label of footer link with label=Ganfan Journal linking to /app/gfjournal"
+    "description": "The label of footer link with label=Ganfan Journal linking to /apps/gfjournal"
   },
   "link.item.label.Ganfan Book": {
     "message": "Ganfan Book",
@@ -33,7 +33,7 @@
   },
   "link.item.label.Support": {
     "message": "支持",
-    "description": "The label of footer link with label=Support linking to /app/support"
+    "description": "The label of footer link with label=Support linking to /apps/support"
   },
   "link.item.label.Zhihu": {
     "message": "知乎",

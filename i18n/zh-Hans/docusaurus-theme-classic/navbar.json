@@ -7,9 +7,9 @@
     "message": "Ganfan Logo",
     "description": "The alt text of navbar logo"
   },
-  "item.label.Products": {
-    "message": "产品",
-    "description": "Navbar item with label Products"
+  "item.label.Apps": {
+    "message": "应用",
+    "description": "Navbar item with label Apps"
   },
   "item.label.Docs": {
     "message": "文档",

@@ -26,7 +26,7 @@ const ProductList: ProductItem[] = [
         A simple and elegant journaling app that makes recording your life effortless and beautiful. Supports iCloud sync, mood tracking, and full-text search.
       </Translate>
     ),
-    link: '/app/gfjournal',
+    link: '/apps/gfjournal',
     platform: 'iOS · macOS',
   },
   {

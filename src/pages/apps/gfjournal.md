@@ -39,11 +39,11 @@ System dark mode support for comfortable night writing.
 - No personal information collected
 - No third-party servers, no analytics, no ads
 
-Read the full [Privacy Policy](/app/privacy/gfjournal).
+Read the full [Privacy Policy](/apps/privacy/gfjournal).
 
 ## Support
 
-Need help? Visit the [Support Center](/app/support) or contact us at [support@ganfan.org](mailto:support@ganfan.org).
+Need help? Visit the [Support Center](/apps/support) or contact us at [support@ganfan.org](mailto:support@ganfan.org).
 
 ## Download
 

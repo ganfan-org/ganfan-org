@@ -115,7 +115,7 @@ const config = {
           src: 'img/ganfan_logo.svg',
         },
         items: [
-          {to: '/app', label: 'Products', position: 'left'},
+          {to: '/apps', label: 'Apps', position: 'left'},
           {href: 'https://games.ganfan.org', label: 'Games', position: 'left'},
           {to: '/books', label: 'Books', position: 'left'},
           {
@@ -143,7 +143,7 @@ const config = {
             items: [
               {
                 label: 'Ganfan Journal',
-                to: '/app/gfjournal',
+                to: '/apps/gfjournal',
               },
               {
                 label: 'Ganfan Book',
@@ -168,7 +168,7 @@ const config = {
               },
               {
                 label: 'Support',
-                to: '/app/support',
+                to: '/apps/support',
               },
             ],
           },

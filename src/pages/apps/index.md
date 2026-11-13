@@ -18,11 +18,11 @@ A simple and elegant journaling app that makes recording your life effortless an
 - Full-text search
 - Simplified Chinese and English support
 
-[Learn more →](/app/gfjournal)
+[Learn more →](/apps/gfjournal)
 
 ## Support
 
-Need help with our apps? Visit the [Support Center](/app/support) for FAQs, or contact us at [support@ganfan.org](mailto:support@ganfan.org).
+Need help with our apps? Visit the [Support Center](/apps/support) for FAQs, or contact us at [support@ganfan.org](mailto:support@ganfan.org).
 
 ---
 

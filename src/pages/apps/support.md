@@ -13,7 +13,7 @@ Welcome to the Ganfan support center. Here you can find help and information abo
 
 A simple and elegant journaling app with automatic iCloud sync across iPhone and Mac.
 
-- [Privacy Policy](/app/privacy/gfjournal)
+- [Privacy Policy](/apps/privacy/gfjournal)
 
 ## FAQs
 
